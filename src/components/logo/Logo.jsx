@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function Logo({ type = "default" }) {
+export default function Logo({ type = "default" }) {
     const defaultLogoUrl = "../images/logo.svg";
     const mutedLogoUrl = "../images/logo-muted.svg";
 
@@ -10,5 +10,3 @@ function Logo({ type = "default" }) {
 
     return React.createElement("img", { src: mutedLogoUrl }, null);
 }
-
-export default Logo;
