@@ -4,7 +4,7 @@ import Link from "../link/Link";
 import styles from "./Example.module.scss";
 import classNames from "classnames";
 
-import Logo from "../Logo";
+//import Logo from "../logo/Logo";
 
 export default function Copyright() {
     return (
