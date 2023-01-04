@@ -1,0 +1,11 @@
+@use "../../styles/colors";
+
+.header_container {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_menu_button {
+    color: #ffffff !important;
+}
