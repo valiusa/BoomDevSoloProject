@@ -1,0 +1,37 @@
+@use "../../styles/colors";
+
+.user {
+    display: grid;
+    grid-template-columns: repeat(2, -10fr);
+    gap: 0.1rem;
+    align-items: center;
+}
+
+.user_avatar_item_container {
+    grid-column: 1;
+}
+
+.user_name_and_info_item_container {
+    grid-column: 2;
+}
+
+.name {
+    margin: 0;
+    padding-bottom: 10px;
+    color: colors.$text_primary;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 2rem;
+    line-height: 20px;
+}
+
+.info {
+    margin: 0;
+    color: colors.$success_main;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 17px;
+}
