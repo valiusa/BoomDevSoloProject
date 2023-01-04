@@ -1,0 +1,73 @@
+@use "../../styles/colors";
+
+.card {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.media {
+    border-radius: 15px;
+}
+
+.title {
+    position: relative;
+    left: -88%;
+    right: 32.45%;
+    top: 84.88%;
+    bottom: 11.29%;
+
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1.3rem;
+    line-height: 20px;
+    color: colors.$text_primary;
+    margin: 0;
+}
+
+.price {
+    position: relative;
+    left: -75%;
+    right: 32.45%;
+    top: 90.07%;
+    bottom: 6.09%;
+
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14.0752px;
+    line-height: 17px;
+    color: colors.$secondary_main;
+    margin: 1px;
+}
+
+.likes {
+    position: relative;
+    left: 40%;
+    right: 32.45%;
+    top: 15%;
+    bottom: 6.09%;
+}
+
+@media only screen and (max-width: 600px) {
+    .title {
+        left: 4%;
+        right: 32.45%;
+        top: 15%;
+        bottom: 6.09%;
+    }
+
+    .price {
+        left: 4%;
+        right: 32.45%;
+        top: 90.07%;
+        bottom: 6.09%;
+    }
+
+    .likes {
+        left: 4%;
+        right: 32.45%;
+        top: 15%;
+        bottom: 6.09%;
+    }
+}
