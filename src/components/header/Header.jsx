@@ -98,23 +98,31 @@ export default function Header() {
                         <Item>
                             <Grid container spacing={3}>
                                 <Grid item xs={3}>
-                                    <Button
-                                        variant="text"
-                                        sx={{ color: "white" }}
-                                    >
-                                        Home
-                                    </Button>
+                                    <Item>
+                                        <Button
+                                            variant="text"
+                                            sx={{ color: "white" }}
+                                        >
+                                            Home
+                                        </Button>
+                                    </Item>
                                 </Grid>
                                 <Grid item xs={5}>
-                                    <Button
-                                        variant="text"
-                                        sx={{ color: "white" }}
-                                    >
-                                        Activity
-                                    </Button>
+                                    <Item>
+                                        <Button
+                                            variant="text"
+                                            sx={{ color: "white" }}
+                                        >
+                                            Activity
+                                        </Button>
+                                    </Item>
                                 </Grid>
                                 <Grid item xs={3}>
-                                    <Button variant="contained">EXPLORE</Button>
+                                    <Item>
+                                        <Button variant="contained">
+                                            EXPLORE
+                                        </Button>
+                                    </Item>
                                 </Grid>
                             </Grid>
                         </Item>

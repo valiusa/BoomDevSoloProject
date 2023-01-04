@@ -5,19 +5,19 @@ import styles from "./Example.module.scss";
 import classNames from "classnames";
 
 //import Logo from "../logo/Logo";
-//import Header from "../header/Header";
+import Header from "../header/Header";
 
 export default function Copyright() {
     return (
         <div className={classNames(styles.wrapper)}>
             <Container className={classNames(styles.container)} maxWidth="xl">
-                <Paper className={classNames(styles.paper)}>
+                {/* <Paper className={classNames(styles.paper)}>
                     <Link href="/about" color="secondary">
                         Hi
                     </Link>
-                    {/* <Logo type="muted"></Logo> */}
-                </Paper>
-                {/* <Header></Header> */}
+                    <Logo type="muted"></Logo>
+                </Paper> */}
+                <Header></Header>
             </Container>
         </div>
     );
