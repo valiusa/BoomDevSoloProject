@@ -4,12 +4,16 @@ import Link from "../link/Link";
 import styles from "./Example.module.scss";
 import classNames from "classnames";
 
-//import Logo from "../logo/Logo";
-//import Header from "../header/Header";
-//import Avatar from "../avatar/Avatar";
-import User from "../user/User";
+import Card from "../card/Card";
 
 export default function Copyright() {
+    const _user = {
+        avatar: {
+            url: "../images/avatar.png",
+        },
+        verified: true,
+    };
+
     return (
         <div className={classNames(styles.wrapper)}>
             <Container className={classNames(styles.container)} maxWidth="xl">
@@ -17,20 +21,14 @@ export default function Copyright() {
                     <Link href="/about" color="secondary">
                         Hi
                     </Link>
-                    <Logo type="muted"></Logo>
                 </Paper> */}
-                {/* <Header></Header> */}
-                {/* <Avatar
-                    url={"../images/avatar.png"}
-                    size={200}
-                    verified={true}
-                /> */}
-                <User
-                    name={"valiusa"}
-                    info={"123 Items"}
-                    avatar={"../images/avatar.png"}
-                    size={55}
-                    verified={true}
+                <Card
+                    name={"Clock"}
+                    likes={1100}
+                    mediaUrl={"../images/nft.jpg"}
+                    user={_user}
+                    price={"~12.2"}
+                    currency={"ETH"}
                 />
             </Container>
         </div>
