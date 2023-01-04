@@ -6,7 +6,8 @@ import classNames from "classnames";
 
 //import Logo from "../logo/Logo";
 //import Header from "../header/Header";
-import Avatar from "../avatar/Avatar";
+//import Avatar from "../avatar/Avatar";
+import User from "../user/User";
 
 export default function Copyright() {
     return (
@@ -19,9 +20,16 @@ export default function Copyright() {
                     <Logo type="muted"></Logo>
                 </Paper> */}
                 {/* <Header></Header> */}
-                <Avatar
+                {/* <Avatar
                     url={"../images/avatar.png"}
                     size={200}
+                    verified={true}
+                /> */}
+                <User
+                    name={"valiusa"}
+                    info={"123 Items"}
+                    avatar={"../images/avatar.png"}
+                    size={55}
                     verified={true}
                 />
             </Container>
