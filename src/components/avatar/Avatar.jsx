@@ -1,21 +1,22 @@
 import * as React from "react";
 
 // mui components
-import Badge from "@mui/material/Badge";
-import Avatar from "@mui/material/Avatar";
-import Stack from "@mui/material/Stack";
+// import Badge from "@mui/material/Badge";
+// import Avatar from "@mui/material/Avatar";
+// import Stack from "@mui/material/Stack";
 
 // styles
-import { styled } from "@mui/material/styles";
+//import { styled } from "@mui/material/styles";
 import classNames from "classnames";
 import styles from "./Avatar.module.scss";
 
-const Verified = styled(Avatar)(({ theme }) => ({
-    width: theme.width,
-    height: theme.height,
-}));
+// const Verified = styled(Avatar)(({ theme }) => ({
+//     width: theme.width,
+//     height: theme.height,
+// }));
 
-export default function AvatarImage({ url, size = 90, verified = false }) {
+//export default function AvatarImage({ url, size = 90, verified = false }) {
+export default function Avatar({ url, size = 90, verified = false }) {
     return (
         <div className={classNames(styles.avatar)} width={size} height={size}>
             <img
