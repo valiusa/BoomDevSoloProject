@@ -8,15 +8,17 @@ import Container from "@mui/material/Container";
 import Card from "../card/Card";
 
 // styles
-import styles from "./Trending.module.scss";
+import styles from "./Actions.module.scss";
 import classNames from "classnames";
 
-export default function Trending({ cards = [] }) {
+export default function Actions({ cards = [] }) {
     return (
-        <div className={classNames(styles.trending_wrapper)}>
+        <div className={classNames(styles.liveaction_wrapper)}>
             <Container maxWidth="lg">
                 <Box display="flex" justifyContent="space-between">
-                    <h1 className={classNames(styles.header)}>Trending</h1>
+                    <h1 className={classNames(styles.header)}>
+                        🔥 Live Actions
+                    </h1>
                     <Select
                         sx={{
                             width: "200px",
@@ -36,6 +38,7 @@ export default function Trending({ cards = [] }) {
                                 user={card.user}
                                 price={card.price}
                                 currency={card.currency}
+                                timeLeft={card.timeLeft}
                             />
                         </Grid>
                     ))}
