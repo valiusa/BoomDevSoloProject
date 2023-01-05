@@ -4,14 +4,73 @@ import Link from "../link/Link";
 import styles from "./Example.module.scss";
 import classNames from "classnames";
 
+import Trending from "../trending/Trending";
 import Card from "../card/Card";
 
 export default function Copyright() {
-    const _user = {
-        avatar: {
-            url: "../images/avatar.png",
+    const _cards = [
+        {
+            name: "Ivy",
+            user: {
+                avatar: {
+                    url: "images/avatar.png",
+                },
+                verified: true,
+            },
+            mediaUrl: "images/nft.jpg",
+            price: 1,
+            currency: "ETH",
         },
-        verified: true,
+        {
+            name: "Judie",
+            user: {
+                avatar: {
+                    url: "images/avatar.png",
+                },
+                verified: true,
+            },
+            mediaUrl: "images/nft.jpg",
+            price: 2.3,
+            currency: "ETH",
+        },
+        {
+            name: "Juniper",
+            user: {
+                avatar: {
+                    url: "images/avatar.png",
+                },
+                verified: true,
+            },
+            mediaUrl: "images/nft.jpg",
+            price: 5,
+            currency: "ETH",
+        },
+        {
+            name: "Maple",
+            user: {
+                avatar: {
+                    url: "images/avatar.png",
+                },
+                verified: true,
+            },
+            mediaUrl: "images/nft.jpg",
+            price: 10,
+            currency: "ETH",
+        },
+    ];
+
+    const card = {
+        name: "Ivy",
+        likes: 1100,
+        user: {
+            avatar: {
+                url: "images/avatar.png",
+            },
+            verified: true,
+        },
+        mediaUrl: "images/nft.jpg",
+        price: "~12.5",
+        currency: "ETH",
     };
 
     return (
@@ -22,13 +81,14 @@ export default function Copyright() {
                         Hi
                     </Link>
                 </Paper> */}
+                <Trending cards={_cards} />
                 <Card
-                    name={"Clock"}
+                    name={card.name}
                     likes={1100}
-                    mediaUrl={"../images/nft.jpg"}
-                    user={_user}
-                    price={"~12.2"}
-                    currency={"ETH"}
+                    mediaUrl={card.mediaUrl}
+                    user={card.user}
+                    price={card.price}
+                    currency={card.currency}
                 />
             </Container>
         </div>

@@ -64,17 +64,13 @@ export default function Card({
             <CardContent>
                 <Box sx={{ flexGrow: 1 }}>
                     <Grid container spacing={3}>
-                        <Grid item>
-                            <Item>
-                                <h5 className={classNames(styles.title)}>
-                                    {name}
-                                </h5>
-                                <p className={classNames(styles.price)}>
-                                    {price} {currency}
-                                </p>
-                            </Item>
+                        <Grid item xs={6} justifyContent="flex-start">
+                            <h5 className={classNames(styles.title)}>{name}</h5>
+                            <p className={classNames(styles.price)}>
+                                {price} {currency}
+                            </p>
                         </Grid>
-                        <Grid item>
+                        <Grid item xs={6} justifyContent="flex-end">
                             <div className={classNames(styles.likes)}>
                                 <Button
                                     sx={{

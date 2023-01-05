@@ -1,0 +1,10 @@
+@use "../../styles/colors";
+
+.header {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 3rem;
+    line-height: 20px;
+    color: colors.$text_primary;
+}
