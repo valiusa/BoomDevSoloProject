@@ -76,7 +76,7 @@ export default function Card({
                 subheader=""
             />
             {time !== 0 ? (
-                <div className={classNames(styles.badge)}>
+                <div className={classNames(styles.Card_badge__)}>
                     <CircleIcon
                         sx={{
                             color: "#181828",
