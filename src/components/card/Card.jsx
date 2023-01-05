@@ -1,5 +1,6 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import millify from "millify";
+import Countdown from "react-countdown";
 
 // mui components
 import { default as MuiCard } from "@mui/material/Card";
@@ -10,24 +11,30 @@ import Button from "@mui/material/Button";
 import Favorite from "@mui/icons-material/Favorite";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import Container from "@mui/material/Container";
+import CircleIcon from "@mui/icons-material/Circle";
 
 // components
 import Avatar from "../avatar/Avatar";
 
 // styles
-import { styled } from "@mui/material/styles";
 import styles from "./Card.module.scss";
 import classNames from "classnames";
 
-// grid item
-const Item = styled(Container)(({ theme }) => ({
-    //backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: "center",
-    color: theme.palette.text.primary,
-}));
+// for timer
+const renderer = ({ hours, minutes, seconds, completed }) => {
+    if (completed) {
+        // Render a completed state
+        return <span>0:0:0</span>;
+    } else {
+        // Render a countdown
+        //return `${hours}:${minutes}:${seconds}`;
+        return (
+            <span>
+                {hours}:{minutes}:{seconds}
+            </span>
+        );
+    }
+};
 
 export default function Card({
     name = "",
@@ -36,11 +43,25 @@ export default function Card({
     user = { avatar: { url: "" }, verified: false },
     price = "",
     currency = "",
+    timeLeft = 0,
 }) {
+    const [time, setTime] = useState(timeLeft);
+
+    useEffect(() => {
+        if (timeLeft !== 0) {
+            const interval = setInterval(() => setTime(0), time);
+        }
+    }, []);
+
     return (
         <MuiCard
             className={classNames(styles.card)}
-            sx={{ maxWidth: 325, borderRadius: 0.5 }}
+            sx={{
+                maxWidth: 325,
+                borderRadius: 0.5,
+                backgroundColor:
+                    time === 0 ? "#181828" : "rgba(36, 242, 94, 0.1)",
+            }}
         >
             <CardHeader
                 sx={{ paddingLeft: 0 }}
@@ -54,6 +75,18 @@ export default function Card({
                 title=""
                 subheader=""
             />
+            {time !== 0 ? (
+                <div className={classNames(styles.badge)}>
+                    <CircleIcon
+                        sx={{
+                            color: "#181828",
+                            width: "1vw",
+                            margin: "0 5px 0 0px",
+                        }}
+                    />
+                    <p className={classNames(styles.badge_text)}>LIVE</p>
+                </div>
+            ) : null}
             <CardMedia
                 className={classNames(styles.media)}
                 component="img"
@@ -61,6 +94,14 @@ export default function Card({
                 image={mediaUrl}
                 alt="nft"
             />
+            {time !== 0 ? (
+                <div className={classNames(styles.timer)}>
+                    <Countdown
+                        date={Date.now() + time}
+                        renderer={renderer}
+                    ></Countdown>
+                </div>
+            ) : null}
             <CardContent>
                 <Box sx={{ flexGrow: 1 }}>
                     <Grid container spacing={3}>
