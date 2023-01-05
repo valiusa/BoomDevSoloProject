@@ -4,7 +4,8 @@ import Link from "../link/Link";
 import styles from "./Example.module.scss";
 import classNames from "classnames";
 
-import Trending from "../trending/Trending";
+//import Trending from "../trending/Trending";
+import Actions from "../actions/Actions";
 import Card from "../card/Card";
 
 export default function Copyright() {
@@ -86,7 +87,8 @@ export default function Copyright() {
                         Hi
                     </Link>
                 </Paper> */}
-                <Trending cards={_cards} />
+                {/* <Trending cards={_cards} /> */}
+                <Actions cards={_cards} />
                 {/* <Card
                     name={card.name}
                     likes={1100}
