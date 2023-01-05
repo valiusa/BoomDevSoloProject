@@ -1,7 +1,8 @@
 import * as React from "react";
 
 // mui components
-import { Select, Container, Grid, MenuItem, Box } from "@mui/material";
+import { Select, Grid, MenuItem, Box } from "@mui/material";
+import Container from "@mui/material/Container";
 
 // components
 import Card from "../card/Card";
