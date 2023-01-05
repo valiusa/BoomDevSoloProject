@@ -1,6 +1,8 @@
 @use "../../styles/colors";
 
 .card {
+    position: relative;
+
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -35,4 +37,45 @@
 
 .likes {
     position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: 20%;
+    left: 9%;
+    display: flex;
+    align-items: center;
+    background-color: colors.$secondary_main;
+    border-radius: 7px;
+    padding: 3px;
+    width: 4vw;
+}
+
+.badge_text {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 0.8rem;
+    line-height: 17px;
+    color: #181828;
+    background-color: colors.$secondary_main;
+    padding: 0;
+    margin: 0;
+}
+
+.timer {
+    position: absolute;
+    left: 4.9%;
+    bottom: 18%;
+    padding: 10px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 22px;
+    color: #181828;
+    text-align: center;
+    border-radius: 0 0 15px 15px;
+    background-color: colors.$secondary_main;
+    width: 90.5%;
 }
