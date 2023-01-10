@@ -75,18 +75,18 @@ export default function Card({
                 title=""
                 subheader=""
             />
-            {/* {time !== 0 ? ( */}
-            <div className={classNames(styles.badge)}>
-                <CircleIcon
-                    sx={{
-                        color: "#181828",
-                        width: "1vw",
-                        margin: "0 5px 0 0px",
-                    }}
-                />
-                <p className={classNames(styles.badge_text)}>LIVE</p>
-            </div>
-            {/* ) : null} */}
+            {time !== 0 ? (
+                <div className={classNames(styles.badge)}>
+                    <CircleIcon
+                        sx={{
+                            color: "#181828",
+                            width: "1vw",
+                            margin: "0 5px 0 0px",
+                        }}
+                    />
+                    <p className={classNames(styles.badge_text)}>LIVE</p>
+                </div>
+            ) : null}
             <CardMedia
                 className={classNames(styles.media)}
                 component="img"
