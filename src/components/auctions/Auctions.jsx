@@ -8,16 +8,16 @@ import Container from "@mui/material/Container";
 import Card from "../card/Card";
 
 // styles
-import styles from "./Actions.module.scss";
+import styles from "./Auctions.module.scss";
 import classNames from "classnames";
 
-export default function Actions({ cards = [] }) {
+export default function Auctions({ cards = [] }) {
     return (
         <div className={classNames(styles.liveaction_wrapper)}>
             <Container maxWidth="lg">
                 <Box display="flex" justifyContent="space-between">
                     <h1 className={classNames(styles.header)}>
-                        🔥 Live Actions
+                        🔥 Live Auctions
                     </h1>
                     <Select
                         sx={{
