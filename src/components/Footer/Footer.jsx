@@ -24,7 +24,7 @@ export default function Footer() {
                             className={classNames(styles.text)}
                             sx={{ paddingTop: 2 }}
                         >
-                            Bum All Rights Reserved 2023
+                            Bum All Rights Reserved 2022
                         </Typography>
                     </Grid>
                     <Grid item xs={4}>
