@@ -1,0 +1,55 @@
+@use "../../styles/colors";
+
+.step_container {
+    width: 30.21vw;
+    height: 22.95vh;
+    background: colors.$background_paper;
+    border-radius: 30px;
+}
+
+.step_number_container {
+    width: 9.74vw;
+    height: 22.95vh;
+    background-color: rgb(78, 36, 242, 0.1);
+    border-radius: 30px 0px 0px 30px;
+    text-align: center;
+}
+
+.step_number {
+    width: 9.74vw;
+    height: 22.95vh;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 6.27rem;
+    line-height: 215px;
+    text-align: center;
+    color: colors.$text_primary;
+    margin: 0;
+    padding: 0;
+}
+
+.step_title {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.13rem;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: colors.$text_primary;
+    margin: 40px 0 0 54px;
+    width: 10.47vw !important;
+    height: 2.46vh;
+}
+
+.step_description {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 24px;
+    color: colors.$text_hint;
+    margin: 0 0 0 54px;
+    width: 14.79vw !important;
+    height: 8.97vh;
+}
