@@ -1,0 +1,33 @@
+@use "../../styles/colors";
+
+.learn_more_btn {
+    background-color: colors.$text_primary !important;
+    color: colors.$primary_main !important;
+    margin: 16px 0 16px 0 !important;
+}
+
+.how_description {
+    color: colors.$text_hint;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 26px;
+    margin: 10px 0 5px 0;
+}
+
+.how_title {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 3.75rem;
+    line-height: 73px;
+    width: 100%;
+    margin: 0;
+}
+
+.how_container {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
